@@ -36,6 +36,8 @@ iconv -f UTF16 -t UTF-8 spray-results.txt >new-spray-results.txt
 
 If you're only interested in enumeration, just run as above for password spraying.  Any return value of "bad password", or any value other than "no user",  would mean you've found a valid username.
 
+A return of "True" for a username means the password supplied is valid.
+
 ### Brute forcing
 
 To leverage the code for brute forcing, simply iterate over the password field instead of the username field:
