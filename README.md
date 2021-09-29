@@ -64,5 +64,7 @@ Microsoft's Smart Lockout feature will start falsely claiming that accounts are 
 $url="https://xxxxxxx.execute-api.us-east-1.amazonaws.com/fireprox/"+$requestid
 ```
 
+This will not get around Smart Lockout if you're attempting to brute-force a password for a specific account, however.
+
 ## Thanks
 Almost all the code for this was borrowed from [Dr. Nestori Syynimaa's excellent AADInternals project](https://raw.githubusercontent.com/Gerenios/AADInternals/eade775c6cd4f8ed16bd77602e1ea12a02fe265e/KillChain_utils.ps1).
