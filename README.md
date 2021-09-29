@@ -38,6 +38,8 @@ If you're only interested in enumeration, just run as above for password sprayin
 
 A return of "True" for a username means the password supplied is valid.
 
+A return of "locked" may mean the account is locked, or that [Smart Lockout](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-password-smart-lockout) is temporarily preventing you from interacting with the account.
+
 ### Brute forcing
 
 To leverage the code for brute forcing, simply iterate over the password field instead of the username field:
