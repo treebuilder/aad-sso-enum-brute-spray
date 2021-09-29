@@ -6,6 +6,8 @@ POC of SecureWorks' recent Azure Active Directory password brute-forcing vuln
 
 This code is a proof-of-concept of the recently revealed Azure Active Directory password brute-forcing vulnerability [announced by Secureworks](https://arstechnica.com/information-technology/2021/09/new-azure-active-directory-password-brute-forcing-flaw-has-no-fix/).
 
+In theory, this approach would allow one to perform brute force or password spraying attacks against one or more AAD accounts without causing account lockout or generating log data, thereby making the attack invisible.
+
 ## Use
 
 Basic usage is simple:  
@@ -41,6 +43,12 @@ To leverage the code for brute forcing, simply iterate over the password field i
 ```
 foreach($line in Get-Content .\passwords.txt) {.\aad-sso-enum-brute-spray.ps1 test.user@contoso.com $line |Out-File -FilePath .\brute-results.txt -Append }
 ```
+
+## What to do once you find a valid username/password pair
+
+If you discover one or more valid username/password pairs, you can modify this code to obtain the DesktopSSOToken that is returned.  The DesktopSSOToken may then be exchanged for an OAuth2 Access Token [using this method](https://securecloud.blog/2019/12/26/reddit-thread-answer-azure-ad-autologon-endpoint/).  
+
+The OAuth2 Access Token may then be used with various Azure, M365, and O365 API endpoints.
 
 
 ## Important note
