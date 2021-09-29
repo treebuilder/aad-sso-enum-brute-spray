@@ -52,6 +52,8 @@ If you discover one or more valid username/password pairs, you can modify this c
 
 The OAuth2 Access Token may then be used with various Azure, M365, and O365 API endpoints.
 
+You may, however, be tripped up by MFA at this point.  Your best bet here would be to leverage non-MFA access, such as Outlook Web Access or ActiveSync.  [Dafthack's MFASweep](https://github.com/dafthack/MFASweep) is helpful here.
+
 
 ## Important note
 Microsoft's Smart Lockout feature will start falsely claiming that accounts are locked if you hit the API endpoint too quickly from the same IP address.  To get around this, I strongly recommend using [ustayready's fireprox](https://github.com/ustayready/fireprox) to avoid this problem.  Simply change the $url variable thus:
