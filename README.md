@@ -4,7 +4,7 @@ POC of SecureWorks' recent Azure Active Directory password brute-forcing vuln
 
 ## Description
 
-This code is a proof-of-concept of the recently revealed Azure Active Directory password brute-forcing vulnerability [announced by Secureworks](https://arstechnica.com/information-technology/2021/09/new-azure-active-directory-password-brute-forcing-flaw-has-no-fix/).
+This code is a proof-of-concept of the recently revealed Azure Active Directory password brute-forcing vulnerability [announced by Secureworks](https://www.secureworks.com/research/undetected-azure-active-directory-brute-force-attacks) (here is the [Ars Technica article that preceded the official publication by about a day, but is pretty much identical](https://arstechnica.com/information-technology/2021/09/new-azure-active-directory-password-brute-forcing-flaw-has-no-fix/)).
 
 In theory, this approach would allow one to perform brute force or password spraying attacks against one or more AAD accounts without causing account lockout or generating log data, thereby making the attack invisible.
 
